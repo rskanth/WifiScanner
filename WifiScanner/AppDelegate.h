@@ -7,9 +7,35 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "ScanData.h"
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate> {
 
-@property (assign) IBOutlet NSWindow *window;
+}
+
+@property (strong) IBOutlet NSComboBox *Interfaceselect;
+@property (strong) IBOutlet NSButton *StartButton;
+-(void) capture_callback: (NSString*) mac1 apmac:(NSString*) mac2
+                  signal:(NSString*)sig vendor:(NSString*)vendor type:(int)type;
+
+@property (strong) IBOutlet NSWindow *AboutWindow;
+
+@property (strong) IBOutlet NSTextField *PacketCount;
+
+
+@property (strong) IBOutlet NSClipView *OutputClip;
+@property (strong) IBOutlet NSTextFieldCell *TextVendor;
+@property (strong) IBOutlet NSView *About;
+
+@property (strong) IBOutlet NSTableView *OutputTable;
+
+@property (strong) IBOutlet NSTextFieldCell *TextSignal;
+@property (strong) IBOutlet NSTextFieldCell *TextMac;
+@property (strong) IBOutlet NSTextFieldCell *TextSSID;
+@property (strong) IBOutlet NSTextFieldCell *TextLastSeen;
+
+
+@property (strong) IBOutlet NSTableColumn *TableMac;
+
 
 @end

@@ -18,6 +18,11 @@
 		5E94793F18241B180085366D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E94791E18241B180085366D /* Cocoa.framework */; };
 		5E94794718241B180085366D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5E94794518241B180085366D /* InfoPlist.strings */; };
 		5E94794918241B180085366D /* WifiScannerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E94794818241B180085366D /* WifiScannerTests.m */; };
+		5E947953182432210085366D /* wifi_scan.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E947952182432210085366D /* wifi_scan.m */; };
+		5E947956182459280085366D /* libpcap.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E947955182459270085366D /* libpcap.dylib */; };
+		5EEFDE7A182B5E4300C01FAF /* ScanData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEFDE79182B5E4300C01FAF /* ScanData.m */; };
+		5EF102F7182484F00045BC72 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EF102F6182484F00045BC72 /* icon.png */; };
+		5EF102F9182484FA0045BC72 /* wireless-icon.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5EF102F8182484FA0045BC72 /* wireless-icon.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +55,13 @@
 		5E94794418241B180085366D /* WifiScannerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WifiScannerTests-Info.plist"; sourceTree = "<group>"; };
 		5E94794618241B180085366D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5E94794818241B180085366D /* WifiScannerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WifiScannerTests.m; sourceTree = "<group>"; };
+		5E947952182432210085366D /* wifi_scan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = wifi_scan.m; path = ../wifi_scan.m; sourceTree = "<group>"; };
+		5E947954182432700085366D /* wifi_scan.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = wifi_scan.h; path = ../wifi_scan.h; sourceTree = "<group>"; };
+		5E947955182459270085366D /* libpcap.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpcap.dylib; path = usr/lib/libpcap.dylib; sourceTree = SDKROOT; };
+		5EEFDE78182B5E4300C01FAF /* ScanData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanData.h; sourceTree = "<group>"; };
+		5EEFDE79182B5E4300C01FAF /* ScanData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanData.m; sourceTree = "<group>"; };
+		5EF102F6182484F00045BC72 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		5EF102F8182484FA0045BC72 /* wireless-icon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "wireless-icon.gif"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E947956182459280085366D /* libpcap.dylib in Frameworks */,
 				5E94791F18241B180085366D /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -76,6 +89,8 @@
 		5E94791218241B180085366D = {
 			isa = PBXGroup;
 			children = (
+				5EF102F8182484FA0045BC72 /* wireless-icon.gif */,
+				5EF102F6182484F00045BC72 /* icon.png */,
 				5E94792418241B180085366D /* WifiScanner */,
 				5E94794218241B180085366D /* WifiScannerTests */,
 				5E94791D18241B180085366D /* Frameworks */,
@@ -95,6 +110,7 @@
 		5E94791D18241B180085366D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5E947955182459270085366D /* libpcap.dylib */,
 				5E94791E18241B180085366D /* Cocoa.framework */,
 				5E94793D18241B180085366D /* XCTest.framework */,
 				5E94792018241B180085366D /* Other Frameworks */,
@@ -117,6 +133,10 @@
 			children = (
 				5E94793018241B180085366D /* AppDelegate.h */,
 				5E94793118241B180085366D /* AppDelegate.m */,
+				5EEFDE78182B5E4300C01FAF /* ScanData.h */,
+				5EEFDE79182B5E4300C01FAF /* ScanData.m */,
+				5E947954182432700085366D /* wifi_scan.h */,
+				5E947952182432210085366D /* wifi_scan.m */,
 				5E94793318241B180085366D /* MainMenu.xib */,
 				5E94793618241B180085366D /* Images.xcassets */,
 				5E94792518241B180085366D /* Supporting Files */,
@@ -231,7 +251,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E94792918241B180085366D /* InfoPlist.strings in Resources */,
+				5EF102F7182484F00045BC72 /* icon.png in Resources */,
 				5E94793718241B180085366D /* Images.xcassets in Resources */,
+				5EF102F9182484FA0045BC72 /* wireless-icon.gif in Resources */,
 				5E94792F18241B180085366D /* Credits.rtf in Resources */,
 				5E94793518241B180085366D /* MainMenu.xib in Resources */,
 			);
@@ -252,6 +274,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EEFDE7A182B5E4300C01FAF /* ScanData.m in Sources */,
+				5E947953182432210085366D /* wifi_scan.m in Sources */,
 				5E94793218241B180085366D /* AppDelegate.m in Sources */,
 				5E94792B18241B180085366D /* main.m in Sources */,
 			);
@@ -387,6 +411,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WifiScanner/WifiScanner-Prefix.pch";
 				INFOPLIST_FILE = "WifiScanner/WifiScanner-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -400,6 +425,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WifiScanner/WifiScanner-Prefix.pch";
 				INFOPLIST_FILE = "WifiScanner/WifiScanner-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -464,6 +490,7 @@
 				5E94794E18241B180085366D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5E94794F18241B180085366D /* Build configuration list for PBXNativeTarget "WifiScannerTests" */ = {
 			isa = XCConfigurationList;
@@ -472,6 +499,7 @@
 				5E94795118241B180085366D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
